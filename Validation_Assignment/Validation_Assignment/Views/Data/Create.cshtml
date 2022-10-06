@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Create</h2>
+
+<body class="take">
+    <form action="" method="post">
+        <div class="row g-1">
+            <div class="col-md-5">
+                <b>Name: </b><input type="text" class="form-control is-invalid" placeholder="Tonmoy Saha"
+                             name="Name" value="@(Model==null ? "" : Model.Name )" />
+                <div class="invalid-feedback">
+                    @Html.ValidationMessage("Name")
+                </div>
+            </div>
+            <div class="col-md-5">
+               <b>ID: </b><input type="text" class="form-control is-invalid" placeholder="XX-XXXXX-X"
+                           name="Id" value="@(Model==null ? "" : Model.Id )" />
+                <div class="invalid-feedback">
+                    @Html.ValidationMessage("Id")
+                </div>
+            </div><br />
+            <div class="col-md-5">
+               <b>Password: </b><input type="text" class="form-control" placeholder="Enter password"
+                                 name="Password" value="@(Model==null ? "" : Model.Password )" />
+                <div class="invalid-feedback">
+                    @Html.ValidationMessage("Password")
+                </div>
+            </div>
+            <div class="col-md-5">
+                <b>Re-enter Password: </b><input type="text" class="form-control" placeholder="Confirm password"
+                                          name="ConfirmPassword" value="@(Model==null ? "" : Model.ConfirmPassword )" />
+                <div class="invalid-feedback">
+                    @Html.ValidationMessage("ConfirmPassword")
+                </div>
+            </div><br />
+            <div class="col-md-5">
+                <b>Email: </b><input type="text" class="form-control" placeholder="XX-XXXXX-X@aiub.edu"
+                              name="Email" value="@(Model==null ? "" : Model.Email )" />
+                <div class="invalid-feedback">
+                    @Html.ValidationMessage("Email")
+                </div>
+            </div>
+            <div class="col-md-5">
+                <b>Date of birth: </b><br />
+                <input type="date" class="form-control" name="Dob" value="@(Model==null ? "" : Model.Dob.ToString("yyyy-MM-dd"))" />
+                <div class="invalid-feedback">
+                    @Html.ValidationMessage("Dob")
+                </div>
+            </div><br /><br /><br />
+
+            <div class="col-md-12 form-check form-check-inline">
+                <br /><b>Gender: </b><br />
+                <div class="radio-inline">
+                    <input type="radio" class="form-check-input" id="GenderM" name="Gender" value="Male" />
+                    <label class="form-check-label" for="Gender">Male</label>
+                </div>
+                <div class="radio-inline">
+                    <input type="radio" class="form-check-input" id="GenderF" name="Gender" value="Female" />
+                    <label class="form-check-label" for="Gender">Female</label>
+                </div>
+                <div class="radio-inline">
+                    <input type="radio" class="form-check-input" id="GenderO" name="Gender" value="Other" />
+                    <label class="form-check-label" for="Gender">Other</label>
+                </div><br />
+                @Html.ValidationMessage("Gender")
+            </div>
+        </div>
+        <br />      
+            <input type="submit" value="Submit" class="anybutton" />
+    </form>
+</body>
+
+
+
+<style>
+    .take {
+        background: #ddf5fb;
+    }
+    .anybutton {
+        top: 50%;
+        left: 30%;
+        width: 100px;
+        height: 40px;
+        position: relative;
+        z-index: 2;
+        background-color: #e7e7e7;
+        border-radius: 12px;
+    }
+    
+</style>

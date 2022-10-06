@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>Information</h2>
+
+
+<dl class="dl-horizontal">
+    <h3>
+        <dt>ID: </dt>
+        <dd>@(Model.Id)</dd>
+        <dt>Name: </dt>
+        <dd>@(Model.Name)</dd>
+        <dt>Email: </dt>
+        <dd>@(Model.Email)</dd>
+        <dt>Date of birth: </dt>
+        <dd>@(Model.Dob.ToShortDateString())</dd>
+        <dt>Gender: </dt>
+        <dd>@(Model.Gender)</dd>
+    </h3>
+</dl>
+
